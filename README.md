@@ -17,14 +17,15 @@ A complete React-based Tourism Recommendation System. This system serves as a fu
 - **Frontend**: React 18+ with TypeScript.
 - **Styling**: Tailwind CSS for a modern, luxurious aesthetic.
 - **Database/Auth**: Supabase (PostgreSQL with RLS policies).
-- **Intelligence Engine**: Google Gemini API (`gemini-3-flash-preview` and `gemini-3-pro-preview`).
-- **Maps**: Leaflet JS.
+- **Intelligence Engine**: Google Gemini API (`gemini-3-flash-preview`).
+
 
 ## Setup Instructions
 
 1. **Environment Variables**:
    Create a `.env` file or set the following environment variables:
    - `API_KEY`: Your Google Gemini API Key.
+   Set the following Supabase variables:
    - `SUPABASE_URL`: Your Supabase Project URL.
    - `SUPABASE_ANON_KEY`: Your Supabase Anon Key.
 
@@ -41,5 +42,3 @@ A complete React-based Tourism Recommendation System. This system serves as a fu
    npm run start
    ```
 
-## Development & Diploma Note
-This system satisfies requirements for a senior-year engineering project, demonstrating full-stack integration, AI prompt engineering, and modern web application architectural patterns.
