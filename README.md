@@ -1,7 +1,7 @@
 
-# GeminiVoyage AI - Tourism Recommendation System
+# Yatra AI - Tourism Recommendation System
 
-A complete React-based Tourism Recommendation System powered by **Google Gemini AI**. This system serves as a full-scale AI-first travel platform where all intelligence is delegated to Large Language Models.
+A complete React-based Tourism Recommendation System. This system serves as a full-scale AI-first travel platform where all intelligence is delegated to Large Language Models.
 
 ## Core Features
 
