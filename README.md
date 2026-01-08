@@ -23,8 +23,8 @@ A complete React-based Tourism Recommendation System. This system serves as a fu
 ## Setup Instructions
 
 1. **Environment Variables**:
-   Create a `.env` file or set the following environment variables:
-   - `API_KEY`: Your Google Gemini API Key.
+   Set the following Gemini API Key in edge function of Supabase:
+   - `GEMINI_API_KEY`: Your Google Gemini API Key.
    Set the following Supabase variables:
    - `SUPABASE_URL`: Your Supabase Project URL.
    - `SUPABASE_ANON_KEY`: Your Supabase Anon Key.
