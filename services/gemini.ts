@@ -1,10 +1,10 @@
 import { Profile, Destination, DetailedPlan, AIRecommendation } from "../types";
 
-const EDGE_FUNCTION_URL = "/functions/v1/generate-plan";
+const SUPABASE_EDGE_URL = "https://neyltlxbdfkbffznzduf.supabase.co/functions/v1/gemini";
 
 export const geminiService = {
   async getRecommendations(profile: Profile, destinations: Destination[]): Promise<AIRecommendation[]> {
-    const response = await fetch(EDGE_FUNCTION_URL, {
+    const response = await fetch(SUPABASE_EDGE_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -14,15 +14,12 @@ export const geminiService = {
       })
     });
 
-    if (!response.ok) {
-      throw new Error("Failed to get recommendations");
-    }
-
-    return await response.json();
+    const data = await response.text();
+    return JSON.parse(data.trim() || "[]");
   },
 
   async generateDetailedPlan(destination: Destination, profile: Profile): Promise<DetailedPlan> {
-    const response = await fetch(EDGE_FUNCTION_URL, {
+    const response = await fetch(SUPABASE_EDGE_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -32,10 +29,7 @@ export const geminiService = {
       })
     });
 
-    if (!response.ok) {
-      throw new Error("Failed to generate detailed plan");
-    }
-
-    return await response.json();
+    const data = await response.text();
+    return JSON.parse(data.trim() || "{}");
   }
 };
