@@ -1,0 +1,7 @@
+{
+  "name": "Copy of GeminiVoyage AI - Tourism Recommendation System",
+  "description": "A high-end tourism platform powered entirely by Gemini AI for personalized recommendations, itinerary planning, and review summarization.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
